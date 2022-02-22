@@ -1,0 +1,66 @@
+// Testemonial
+
+/* colors */
+$bground-gray: #c3cfe2;
+$text-bground-white: #fff;
+$txt-color: #3e3e3f;
+$bluegray: #343447;
+
+/* margin & padding */
+$sm-padding: 10px;
+$st-padding: 20px;
+
+// border radius
+$b-radius: 10px;
+
+/* mixin */
+@mixin text-field {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: medium;
+  color: $txt-color;
+  padding: $st-padding;
+  line-height: 1.5;
+  font-size: 13px;
+}
+
+// Portfolio
+
+/* colors */
+$bluegray: #343447;
+
+/* margin & padding */
+$sm-padding: 10px;
+
+@mixin social {
+  height: 40px;
+  width: 40px;
+  padding: $sm-padding;
+  transition: width 2000ms ease-in-out;
+  color: white;
+  align-content: start;
+}
+
+// Social buttons
+
+$socialpadding: 10px 30px 10px 5px;
+$transformx: translateX(10px);
+
+@mixin position {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  padding: $socialpadding;
+}
+
+@mixin fa {
+  position: relative;
+  padding: 20px 20px 10px 5px;
+  font-size: 30px;
+  width: 300px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0;
+  transform: translateX(245px);
+  transition-duration: 1s;
+}

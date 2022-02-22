@@ -1,0 +1,190 @@
+@import "_constants";
+@import "_media";
+
+/* global */
+
+body {
+  background-color: $bground-gray;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #9497daf5;
+  font-size: 12px;
+  text-transform: none;
+}
+
+/* Testimonial opdracht */
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $text-bground-white;
+  box-shadow: 0px 0px 10px gray;
+  border-radius: $b-radius;
+  margin: auto;
+  width: 275px;
+  height: 100%;
+  .t-content {
+    height: 250px;
+    p {
+      @include text-field;
+    }
+  }
+  .t-footer {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px 0px 10px 10px;
+    height: 120px;
+    padding-bottom: 5px;
+    background-color: #686de0;
+    justify-content: end;
+    align-items: center;
+    p {
+      text-align: center;
+      text-transform: uppercase;
+      color: white;
+      padding: $sm-padding;
+    }
+  }
+  img {
+    align-self: center;
+    margin: -15%;
+    z-index: 1;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    width: 30%;
+  }
+}
+/* Portfolio opdracht */
+
+.portfolio {
+  display: grid;
+  margin: 20px auto;
+  max-width: 1200px;
+  grid-gap: 20px;
+  .image {
+    position: relative;
+    background: $bluegray;
+    border-radius: $b-radius;
+    width: 100%;
+    height: 100%;
+    img {
+      border-radius: $b-radius;
+      width: 100%;
+      height: 100%;
+      transition: 500ms ease;
+    }
+    .button {
+      position: absolute;
+      transition: 0.5s ease;
+      opacity: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      border: none;
+      border-radius: 5px;
+      background-color: white;
+      padding: $sm-padding;
+      a {
+        color: black;
+        padding: $sm-padding;
+        font-weight: bold;
+      }
+    }
+
+    &:hover img {
+      opacity: 0;
+    }
+    &:hover .button {
+      opacity: 1;
+    }
+  }
+}
+/* Social Media buttons opdracht */
+
+.socialbuttons {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  color: white;
+  a {
+    color: white;
+    p {
+      display: inline;
+      position: absolute;
+      top: 10px;
+      left: 80px;
+      padding-left: 20px;
+      font-size: 16px;
+      text-decoration: underline;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: normal;
+    }
+  }
+
+  .fa-laptop-code {
+    background-color: #e17b77;
+    @include fa;
+    &:hover {
+      transform: $transformx;
+    }
+    &::before {
+      content: "\f5fc";
+      @include position;
+      left: 20px;
+    }
+  }
+
+  .fa-twitter {
+    background-color: #00aced;
+    @include fa;
+    &:hover {
+      transform: $transformx;
+    }
+    &::before {
+      content: "\f099";
+      @include position;
+    }
+  }
+
+  .fa-linkedin-in {
+    background-color: #007bb6;
+    @include fa;
+    &:hover {
+      transform: $transformx;
+    }
+    &::before {
+      content: "\f0e1";
+      @include position;
+    }
+  }
+
+  .fa-facebook-f {
+    background-color: #3b5998;
+    @include fa;
+    &:hover {
+      transform: $transformx;
+    }
+    &::before {
+      content: "\f39e";
+      @include position;
+      left: 30px;
+    }
+  }
+
+  .fa-github {
+    background-color: #333;
+    @include fa;
+    &:hover {
+      transform: $transformx;
+    }
+    &::before {
+      content: "\f09b";
+      @include position;
+    }
+  }
+}
